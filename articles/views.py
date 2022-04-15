@@ -13,8 +13,17 @@ def home_view(request):
 
 def article_list_view(request):
     articles = Article.objects.order_by('-id')
+    search = request.GET.get('search')
+    cat = request.GET.get('cat')
+    if search:
+        articles = articles.filter(title__icontains=search)
+    if cat:
+        articles = articles.filter(category__title=cat)
 
-    context = {'object_list': articles}
+    context = {
+        'object_list': articles,
+        'search': search,
+    }
 
     return render(request, 'articles/articles.html', context)
 
