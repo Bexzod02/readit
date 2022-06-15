@@ -15,6 +15,9 @@ def article_list_view(request):
     articles = Article.objects.order_by('-id')
     search = request.GET.get('search')
     cat = request.GET.get('cat')
+    tag = request.GET.get('tag')
+    if tag:
+        articles = articles.filter(tags__tag__iexact=tag)
     if search:
         articles = articles.filter(title__icontains=search)
     if cat:

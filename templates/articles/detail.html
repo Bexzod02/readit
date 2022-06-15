@@ -31,7 +31,7 @@
                 <div class="tag-widget post-tag-container mb-5 mt-5">
                     <div class="tagcloud">
                         {% for tag in object.tags.all %}
-                        <a href="#" class="tag-cloud-link">{{ tag }}</a>
+                        <a href="/articles/?tag={{ tag }}" class="tag-cloud-link">{{ tag }}</a>
                         {% endfor %}
                     </div>
                 </div>
@@ -132,7 +132,7 @@
                     <h3>Tag Cloud</h3>
                     <div class="tagcloud">
                         {% for tag in tags %}
-                            <a href="#" class="tag-cloud-link">{{ tag }}</a>
+                            <a href="/articles/?tag={{ tag }}" class="tag-cloud-link">{{ tag }}</a>
                         {% endfor %}
                     </div>
                 </div>

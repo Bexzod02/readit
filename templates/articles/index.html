@@ -42,7 +42,7 @@
                         <div class="col-md-6 col-lg-6 col-xl-4 d-flex">
                             <div class="text w-100 pl-md-3">
                                 <span class="subheading">{{ object.category }}</span>
-                                <h2><a href="blog-single.html">{{ object.title }}</a></h2>
+                                <h2><a href="{% url 'detail' object.slug %}">{{ object.title }}</a></h2>
                                 <ul class="media-social list-unstyled">
                                     <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
                                     <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
