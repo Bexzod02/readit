@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-kqs#upg!*j_vz-vp$108@&*iaaq)&8u&5zk&av+uhj*b(#fp!)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['readit-again.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -82,12 +82,12 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'd3slc3fcjitek',
-        'USER': 'kwymdqpltftipt',
-        'PASSWORD': '04ec7ed5f8508ae1588074e3429e4053f66a290d6460a2e589e2bdc0cf5575df',
-        'HOST': 'ec2-3-229-11-55.compute-1.amazonaws.com',
-        'PORT': 5432,
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'db.sqlite3',
+        # 'USER': 'kwymdqpltftipt',
+        # 'PASSWORD': '04ec7ed5f8508ae1588074e3429e4053f66a290d6460a2e589e2bdc0cf5575df',
+        # 'HOST': 'ec2-3-229-11-55.compute-1.amazonaws.com',
+        # 'PORT': 5432,
     }
 }
 
@@ -131,7 +131,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
+#
 STATICFILES_DIRS = [BASE_DIR / 'static']
 
 MEDIA_URL = '/media/'

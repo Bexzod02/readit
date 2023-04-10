@@ -6,7 +6,6 @@ from django.urls import reverse
 
 def home_view(request):
     articles = Article.objects.order_by('-id')[:10]
-
     context = {'object_list': articles}
     return render(request, 'articles/index.html', context)
 

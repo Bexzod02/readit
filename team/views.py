@@ -11,3 +11,4 @@ def team_view(request):
         'members': members
     }
     return render(request, 'team/index.html', context)
+
